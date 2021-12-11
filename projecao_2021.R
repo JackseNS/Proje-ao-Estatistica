@@ -1,4 +1,4 @@
-setwd("Y:/ASSESSORIA TÉCNICA/ESTIMATIVA DA ARRECADAÇÃO/Banco ICMS/Projecao_2021")
+setwd("Y:/ASSESSORIA TÃ‰CNICA/ESTIMATIVA DA ARRECADAÃ‡ÃƒO/Banco ICMS/Projecao_2021")
 
 library(readxl)
 library(forecast)
@@ -9,7 +9,7 @@ Base$MES <- as.Date(Base$MES)
 Base <- data.frame(Base)
 
 
-'TRANSFORMANDO AS VARIÃVEIS EM DATA FRAME EM SÃ‰RIES TEMPORAIS'
+'TRANSFORMANDO AS VARIÃƒÂVEIS EM DATA FRAME EM SÃƒâ€°RIES TEMPORAIS'
 ICMS <- ts(Base$ICMS, start = c(2004,1), end = c(2021,9), frequency = 12)
 IPVA <- ts(Base$IPVA, start = c(2004,1), end = c(2021,9), frequency = 12)
 ITCD <- ts(Base$ITCD, start = c(2004,1), end = c(2021,9), frequency = 12)
@@ -20,7 +20,7 @@ plot(IPVA)
 plot(ITCD)
 plot(TOTAL)
 
-'ANÃLISE EXPLORATÃ“RIA'
+'ANÃƒÂLISE EXPLORATÃƒâ€œRIA'
 #SUPONDO QUE SEJA UMA SERIE ADITIVA
 plot(decompose(ICMS, type= "additive"), xlab= "Ano", col="black")
 plot(decompose(IPVA, type= "additive"), xlab= "Ano", col="black")
@@ -43,7 +43,7 @@ Testeicms <- window(ICMS, start= c(2021,4), end= c(2021,9))
 
 'Aplicacao do modelo espaco de estado de suavizacao eXponencial'
 ets <- ets(Modelagemicms) #modelagem
-modeloets <- forecast.ets(ets,h=6, level= 95) # previsão, modeloets$fitted, modeloets$x
+modeloets <- forecast.ets(ets,h=6, level= 95) # previsÃ£o, modeloets$fitted, modeloets$x
 modeloets <- data.frame(modeloets)
 summary(ets)
 
@@ -80,7 +80,7 @@ arima <- data.frame(arima)
 arima
 
 
-'Escolhendo o melhor modelo pelo critério MAPE'
+'Escolhendo o melhor modelo pelo critÃ©rio MAPE'
 
 # erro <-  sum(abs(modeloets$Point.Forecast- Testeicms))
 # erro
@@ -106,13 +106,13 @@ Mape3
 abaixo de 0,05 ou 5%.'
 
 ####################################################################
-# MELHORES PARÂMETROS
+# MELHORES PARÃ‚METROS
 
 modelo_holtwinters <- HoltWinters(x = Modelagemicms , alpha = 0.24,
                                   beta = 0.15,
                                   gamma = 0.06,
                                   seasonal = "multiplicative")
-previsao_holtwinters <- forecast(modelo_holtwinters, h = 6, level = 0.95) # previsão
+previsao_holtwinters <- forecast(modelo_holtwinters, h = 6, level = 0.95) # previsÃ£o
 previsao_holtwinters
 previsao_holtwinters2 <- data.frame(previsao_holtwinters)
 
@@ -150,7 +150,7 @@ Mape22
 # 
 # 
 # 
-# 'previsão com suavização exponencial '
+# 'previsÃ£o com suavizaÃ§Ã£o exponencial '
 # 
 # ets <- ets(ICMS)
 # ets
@@ -173,7 +173,7 @@ plot(ModelagemIPVA)
 
 'Aplicacao do modelo espaco de estado de suavizacao eXponencial'
 etsIPVA <- ets(ModelagemIPVA) #modelagem
-modeloetsIPVA <- forecast.ets(etsIPVA,h=6, level= 95) # previsão, modeloets$fitted, modeloets$x
+modeloetsIPVA <- forecast.ets(etsIPVA,h=6, level= 95) # previsÃ£o, modeloets$fitted, modeloets$x
                                                       # FORECAST pacote de previsao in R
 modeloetsIPVA <- data.frame(modeloetsIPVA)
 modeloetsIPVA
@@ -191,7 +191,7 @@ modelo_holtwintersIPVA <- HoltWinters(x = ModelagemIPVA,
 #                                  beta = holtwinters$beta, 
 #                                  gamma = holtwinters$gamma,
 #                                  seasonal = "multiplicative")
-previsao_holtwintersIPVA <- forecast(modelo_holtwintersIPVA, h = 6, level = 0.95) # previsão
+previsao_holtwintersIPVA <- forecast(modelo_holtwintersIPVA, h = 6, level = 0.95) # previsÃ£o
 
 previsao_holtwintersIPVA <- data.frame(previsao_holtwintersIPVA)
 
@@ -223,7 +223,7 @@ arimaIPVA
 
 
 
-'Escolhendo o melhor modelo pelo critério MAPE'
+'Escolhendo o melhor modelo pelo critÃ©rio MAPE'
 # 
 # erroEIPVA <-  sum(abs(modeloetsIPVA$Point.Forecast- TesteIPVA))
 # erroEIPVA
@@ -247,7 +247,7 @@ Mape3IPVA
 
 
 ###################################################################
-# MELHORES PARÂMETROS
+# MELHORES PARÃ‚METROS
 
 modelo_holtwintersIPVA <- HoltWinters(x = ModelagemIPVA , alpha = 0.24,
                                   beta = 0.1,
@@ -256,7 +256,7 @@ modelo_holtwintersIPVA <- HoltWinters(x = ModelagemIPVA , alpha = 0.24,
 
 
 
-previsao_holtwintersIPVA <- forecast(modelo_holtwintersIPVA, h = 6, level = 0.95) # previsão
+previsao_holtwintersIPVA <- forecast(modelo_holtwintersIPVA, h = 6, level = 0.95) # previsÃ£o
 
 previsao_holtwintersIPVA <- data.frame(previsao_holtwintersIPVA)
 previsao_holtwintersIPVA
@@ -265,7 +265,7 @@ MapeIPVA
 
 
 ###################################################################
-#previsão para 3 MESES SEGUINTES A SETEMBRO
+#previsÃ£o para 3 MESES SEGUINTES A SETEMBRO
 
 modelo_holtwintersIPVA <- HoltWinters(x = ModelagemIPVA , alpha = 0.24,
                                       beta = 0.1,
@@ -273,7 +273,7 @@ modelo_holtwintersIPVA <- HoltWinters(x = ModelagemIPVA , alpha = 0.24,
                                       seasonal = "multiplicative")
 
 
-previsao_holtwintersIPVA <- forecast(IPVA, h = 3, level = 0.95) # previsão
+previsao_holtwintersIPVA <- forecast(IPVA, h = 3, level = 0.95) # previsÃ£o
 previsao_holtwintersIPVA <- data.frame(previsao_holtwintersIPVA)
 previsao_holtwintersIPVA
 
@@ -294,16 +294,16 @@ TesteITCD <- window(ITCD, start= c(2021,1), end= c(2021,9))
 TesteITCD
 
 plot(ModelagemITCD)
-#------------------------------------#SUAVIZAÇÃO EXPONENCIAL
+#------------------------------------#SUAVIZAÃ‡ÃƒO EXPONENCIAL
 
 etsITCD <- ets(ModelagemITCD) #modelagem
-modeloetsITCD <- forecast.ets(etsITCD,h=9, level= 95) # previsão, modeloets$fitted, modeloets$x
+modeloetsITCD <- forecast.ets(etsITCD,h=9, level= 95) # previsÃ£o, modeloets$fitted, modeloets$x
                                                       # FORECAST pacote de previsao in R
 modeloetsITCD <- data.frame(modeloetsITCD)
 modeloetsITCD
 summary(etsITCD)
 
-# #gráfico
+# #grÃ¡fico
 # plot(ModelagemITCD, col= 4)
 # par(new=TRUE)
 # plot(etsITCD$fitted, col=2)
@@ -319,11 +319,11 @@ modelo_holtwintersITCD <- HoltWinters(x = ModelagemITCD,
 #                                  beta = holtwinters$beta, 
 #                                  gamma = holtwinters$gamma,
 #                                  seasonal = "multiplicative")
-previsao_holtwintersITCD <- forecast(modelo_holtwintersITCD, h = 9, level = 0.95) # previsão
+previsao_holtwintersITCD <- forecast(modelo_holtwintersITCD, h = 9, level = 0.95) # previsÃ£o
 previsao_holtwintersITCD <- data.frame(previsao_holtwintersITCD)
 previsao_holtwintersITCD
 
-# #gráfico
+# #grÃ¡fico
 # plot(ModelagemITCD, col= 4)
 # par(new=TRUE)
 # plot(modelo_holtwintersITCD$fitted[,1], col=2)
@@ -355,7 +355,7 @@ arimaITCD
 
 
 
-#------------------------#Escolhendo o melhor modelo pelo critério MAPE
+#------------------------#Escolhendo o melhor modelo pelo critÃ©rio MAPE
 
 # erroEITCD <-  sum(abs(modeloetsITCD$Point.Forecast- TesteITCD))
 # erroEITCD
@@ -379,13 +379,13 @@ Mape3ITCD
 
 
 ###################################################################
-# MELHORES PARÂMETROS
+# MELHORES PARÃ‚METROS
 
 modelo_holtwintersITCD <- HoltWinters(x = ModelagemITCD , alpha = 0.09,
                                       beta = 0.699,
                                       gamma = 0.5,
                                       seasonal = "multiplicative")
-previsao_holtwintersITCD <- forecast(modelo_holtwintersITCD, h = 6, level = 0.95) # previsão
+previsao_holtwintersITCD <- forecast(modelo_holtwintersITCD, h = 6, level = 0.95) # previsÃ£o
 
 previsao_holtwintersITCD <- data.frame(previsao_holtwintersITCD)
 previsao_holtwintersITCD
@@ -429,10 +429,10 @@ TesteTOTAL
 
 
 
-#------------------------------------#SUAVIZAÇÃO EXPONENCIAL
+#------------------------------------#SUAVIZAÃ‡ÃƒO EXPONENCIAL
 
 etsTOTAL <- ets(ModelagemTOTAL) #modelagem
-modeloetsTOTAL <- forecast.ets(etsTOTAL,h=6, level= 95) # previsão, modeloets$fitted, modeloets$x
+modeloetsTOTAL <- forecast.ets(etsTOTAL,h=6, level= 95) # previsÃ£o, modeloets$fitted, modeloets$x
                                                       # FORECAST pacote de previsao in R
 modeloetsTOTAL <- data.frame(modeloetsTOTAL)
 modeloetsTOTAL
@@ -447,7 +447,7 @@ modelo_holtwintersTOTAL <- HoltWinters(x = ModelagemTOTAL,
 #                                  beta = holtwinters$beta, 
 #                                  gamma = holtwinters$gamma,
 #                                  seasonal = "multiplicative")
-previsao_holtwintersTOTAL <- forecast(modelo_holtwintersTOTAL, h = 6, level = 0.95) # previsão
+previsao_holtwintersTOTAL <- forecast(modelo_holtwintersTOTAL, h = 6, level = 0.95) # previsÃ£o
 previsao_holtwintersTOTAL <- data.frame(previsao_holtwintersTOTAL)
 previsao_holtwintersTOTAL
 
@@ -475,7 +475,7 @@ arimaTOTAL <- data.frame(arimaTOTAL)
 arimaTOTAL
 
 
-#------------------------#Escolhendo o melhor modelo pelo critério MAPE
+#------------------------#Escolhendo o melhor modelo pelo critÃ©rio MAPE
 
 # erroETOTAL <-  sum(abs(modeloetsTOTAL$Point.Forecast- TesteTOTAL))
 # erroETOTAL
@@ -499,13 +499,13 @@ Mape3TOTAL
 
 
 ###################################################################
-# MELHORES PARÂMETROS
+# MELHORES PARÃ‚METROS
 
 modelo_holtwintersTOTAL <- HoltWinters(x = ModelagemTOTAL , alpha = 0.1,
                                       beta = 0.3,
                                       gamma = 0.45,
                                       seasonal = "multiplicative")
-previsao_holtwintersTOTAL <- forecast(modelo_holtwintersTOTAL, h = 6, level = 0.95) # previsão
+previsao_holtwintersTOTAL <- forecast(modelo_holtwintersTOTAL, h = 6, level = 0.95) # previsÃ£o
 
 previsao_holtwintersTOTAL <- data.frame(previsao_holtwintersTOTAL)
 previsao_holtwintersTOTAL
@@ -537,18 +537,18 @@ MapeTOTAL
 
 
 
-# ' USANDO O CÓDIGO DO RAFAEL '
+# ' USANDO O CÃ“DIGO DO RAFAEL '
 # 
 # 'var'
 # require(vars)
 # 
 # grupo1 <- read_xlsx(path = "Variaveis.xlsx", sheet = 1)
-# grupo1$MES <- as.Date(grupo1$Mês)
+# grupo1$MES <- as.Date(grupo1$MÃªs)
 # grupo1 <- data.frame(grupo1)
 # 
 # 
 # ICMS <- ts(grupo1$ICMS, start = c(2004,1), end = c(2021,6), frequency = 12)
-# IPCA <- ts(grupo1$IPCA...Núm.índice, start = c(2004,1), end = c(2021,6), frequency = 12)
+# IPCA <- ts(grupo1$IPCA...NÃºm.Ã­ndice, start = c(2004,1), end = c(2021,6), frequency = 12)
 # GASOLINA <- ts(grupo1$Gasolina.C..m3., start = c(2004,1), end = c(2021,6), frequency = 12)
 # COMERCIO <- ts(grupo1$Consumo.Comercial, start = c(2004,1), end = c(2021,6), frequency = 12)
 # 
