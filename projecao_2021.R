@@ -9,26 +9,16 @@ Base$MES <- as.Date(Base$MES)
 Base <- data.frame(Base)
 
 
-'TRANSFORMANDO AS VARIÃVEIS EM DATA FRAME EM SÃ‰RIES TEMPORAIS'
-ICMS <- ts(Base$ICMS, start = c(2004,1), end = c(2021,9), frequency = 12)
+#TRANSFORMANDO AS VARIAVEIS EM DATA FRAME EM SERIES TEMPORAIS
 IPVA <- ts(Base$IPVA, start = c(2004,1), end = c(2021,9), frequency = 12)
-ITCD <- ts(Base$ITCD, start = c(2004,1), end = c(2021,9), frequency = 12)
-TOTAL <- ts(Base$TOTAL, start = c(2004,1), end = c(2021,9), frequency = 12)
 
-plot(ICMS)
 plot(IPVA)
-plot(ITCD)
-plot(TOTAL)
 
-'ANÃLISE EXPLORATÃ“RIA'
+#ANALISE EXPLORATORIA
+
 #SUPONDO QUE SEJA UMA SERIE ADITIVA
-plot(decompose(ICMS, type= "additive"), xlab= "Ano", col="black")
+
 plot(decompose(IPVA, type= "additive"), xlab= "Ano", col="black")
-plot(decompose(ITCD, type= "additive"), xlab= "Ano", col="black")
-plot(decompose(TOTAL, type= "additive"), xlab= "Ano", col="black")
-
-
-
 
 '---------------------------------------------------------------------------------
 ------------------ PROJECAO PARA O ICMS -------------------------------------------
@@ -158,10 +148,10 @@ Mape22
 
 
 
-'---------------------------------------------------------------------------------
------------------- PROJECAO PARA O IPVA -------------------------------------------
-----------------------------------------------------------------------------------
-----------------------------------------------------------------------------------'
+#---------------------------------------------------------------------------------
+#------------------ PROJECAO PARA O IPVA -------------------------------------------
+#----------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------
 
 #separando o IPVA em modelagem e teste
 ModelagemIPVA <- window(IPVA, start= c(2004,1), end= c(2021,3))
@@ -171,7 +161,7 @@ TesteIPVA
 plot(ModelagemIPVA)
 
 
-'Aplicacao do modelo espaco de estado de suavizacao eXponencial'
+#-------------------------------------------------------Aplicacao do modelo espaco de estado de suavizacao eXponencial----------------------------------------------------------#
 etsIPVA <- ets(ModelagemIPVA) #modelagem
 modeloetsIPVA <- forecast.ets(etsIPVA,h=6, level= 95) # previsão, modeloets$fitted, modeloets$x
                                                       # FORECAST pacote de previsao in R
@@ -179,12 +169,7 @@ modeloetsIPVA <- data.frame(modeloetsIPVA)
 modeloetsIPVA
 summary(etsIPVA)
 
-
-
-
-
-
-'Holt Winters '
+#----------------------------------------------------------------------------------Holt Winters---------------------------------------------------------------------------------#
 modelo_holtwintersIPVA <- HoltWinters(x = ModelagemIPVA, 
                                   seasonal = "multiplicative") # modelagem 
 #modelo_holtwinters <- HoltWinters(x = Modelagemicms , alpha = holtwinters$alpha,
@@ -200,7 +185,7 @@ previsao_holtwintersIPVA
 
 
 
-'SARIMA'
+#----------------------------------------------------------------------------------SARIMA---------------------------------------------------------------------------------------#
 library(sandwich)
 
 arimaIPVA <- auto.arima(ModelagemIPVA, lambda = 0, trace = T) 
@@ -209,7 +194,6 @@ arimaIPVA <- auto.arima(ModelagemIPVA, lambda = 0, trace = T)
 previsao_arimaIPVA <- forecast(object = arimaIPVA, h = 6, level = 0.95) 
 previsao_arimaIPVA<- data.frame(previsao_arimaIPVA)
 previsao_arimaIPVA
-
 
 # MapeIPVA <- mean(abs((TesteIPVA- previsao_arimaIPVA$Point.Forecast)/TesteIPVA))*100
 # MapeIPVA
