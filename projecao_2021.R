@@ -131,15 +131,6 @@ arimaIPVA <- data.frame(arimaIPVA)
 arimaIPVA
 
 #--------------------------------------------------------------------Escolhendo o melhor modelo pelo critério MAPE--------------------------------------------------------------#
-# 
-# erroEIPVA <-  sum(abs(modeloetsIPVA$Point.Forecast- TesteIPVA))
-# erroEIPVA
-# 
-# erroHIPVA <-  sum(abs(previsao_holtwintersIPVA$Point.Forecast- TesteIPVA))
-# erroHIPVA
-# 
-# erroAIPVA <-  sum(abs(previsao_arimaIPVA$Point.Forecast- TesteIPVA))
-# erroAIPVA
 
 Mape1IPVA <- mean(abs((TesteIPVA- modeloetsIPVA$Point.Forecast)/TesteIPVA))*100
 Mape1IPVA
