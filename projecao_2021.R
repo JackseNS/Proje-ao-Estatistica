@@ -21,63 +21,6 @@ plot(IPVA)
 plot(decompose(IPVA, type= "additive"), xlab= "Ano", col="black")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-# plot(Testeicms,
-#      main='',
-#      xlab='Ano', ylab='',
-#      col='blue',
-#      bty='l')
-# par(new=TRUE)
-# plot(modeloets$Point.Forecast,
-#      axes=F, ann=F,
-#      col='red',
-#       type = "l")
-# par(new=TRUE)
-# plot(previsao_holtwinters$Point.Forecast,
-#      axes=F, ann=F,
-#      col=4,
-#      type = "l")
-# par(new=TRUE)
-# plot(arima$Point.Forecast,
-#      axes=F, ann=F,
-#      col=9,
-#      type = "l")
-# legend('topleft',
-#        c('Teste', 'ETS', "Holt"),
-#        col=c('blue', 'red', 4), lty=1:2,
-#        bty='n')
-# grid(col='darkgrey')
-# 
-# 
-# 
-# 'previsão com suavização exponencial '
-# 
-# ets <- ets(ICMS)
-# ets
-# forecast.ets(ets ,h=4, level= 95) 
-
-
-
-
-
-
-
-
-
-
-
-
 #---------------------------------------------------------------------------------
 #------------------ PROJECAO PARA O IPVA -------------------------------------------
 #----------------------------------------------------------------------------------
