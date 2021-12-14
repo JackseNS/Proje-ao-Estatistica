@@ -12,3 +12,4 @@
 
 # Conclusao 
 ![IPVA](https://user-images.githubusercontent.com/94062159/145993329-3d72a959-c87c-41cf-9970-aa2b6d188b61.png)
+![MODELAGEM_IPVA](https://user-images.githubusercontent.com/94062159/145993396-69579747-11a6-44b3-925b-48e162e09076.png)
