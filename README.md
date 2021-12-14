@@ -29,4 +29,11 @@ Supondo que a série seja aditiva séra realizado a decomposição da série sep
   
 </div>
 
+Agora para a realização da projeção será realizado uma parte fundamental que e a separação em dados de modelagem e dados para teste,ou seja, os dados originais que serviram para a comparação com os dados de teste que será usado realizar a previsão. O período para os dados de modelagem usados são de janeiro de 2004 á março de 2021, e os dados para teste utilizados são de abril de 2021 á outubro de 2021. Como pode ser visto na Gráfico 03:
+
+Gráfico 03 - Dados de modelagem para a série IPVA:
+<div align="center"> 
+  
 ![MODELAGEM_IPVA](https://user-images.githubusercontent.com/94062159/145993396-69579747-11a6-44b3-925b-48e162e09076.png)
+  
+</div>
