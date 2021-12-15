@@ -45,3 +45,4 @@ Portanto, segundo a previsão realizada para 3 meses  ( outubro,novembro e dezem
 
 ![image](https://user-images.githubusercontent.com/94062159/146196943-609b9e2f-2a62-43c8-93b8-097ead07d21a.png)
 
+A referida pesquisa foi realizada antes da atualização da arrecadação do IPVA e no fim deste artigo foi atuzalizado a arrecadação para o mês de novembro fornecido pela própria Secretária de Estado da Fazenda - SEFA
