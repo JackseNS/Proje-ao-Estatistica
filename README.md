@@ -40,3 +40,8 @@ Gráfico 03 - Dados de modelagem para a série IPVA:
 
 # Conclusão
 
+Portanto, segundo a previsão realizada para 3 meses  ( outubro,novembro e dezembro), do mesmo ano  todos os parâmetros  recomendados pelos modelos deram erro muito acima do recomendavel , então utilizando o modelo de Holt - Winters foram escolhoidos novos parâmetros para aplicação ,causando um erro de  4,92% . Chegando na determinada previsão:
+
+
+![image](https://user-images.githubusercontent.com/94062159/146196943-609b9e2f-2a62-43c8-93b8-097ead07d21a.png)
+
