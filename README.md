@@ -40,9 +40,20 @@ Gráfico 03 - Dados de modelagem para a série IPVA:
 
 # Conclusão
 
-Portanto, segundo a previsão realizada para 3 meses  ( outubro,novembro e dezembro), do mesmo ano  todos os parâmetros  recomendados pelos modelos deram erro muito acima do recomendavel , então utilizando o modelo de Holt - Winters foram escolhoidos novos parâmetros para aplicação ,causando um erro de  4,92% . Chegando na determinada previsão:
+Portanto, segundo a previsão realizada para 3 meses  ( outubro,novembro e dezembro), do mesmo ano  todos os parâmetros  recomendados pelos modelos deram erro muito acima do recomendavel , então utilizando o modelo de Holt - Winters foram escolhoidos novos parâmetros para aplicação ,causando um erro de  4,92% . Chegando na determinada previsão,apresentado na Tabela 01:
 
+Tabela 01 - Arrecadação estimada para o IPVA,para o período de de outubro de 2021 - dezembro de 2021:
+<div align="center"> 
 
 ![image](https://user-images.githubusercontent.com/94062159/146196943-609b9e2f-2a62-43c8-93b8-097ead07d21a.png)
 
-A referida pesquisa foi realizada antes da atualização da arrecadação do IPVA e no fim deste artigo foi atuzalizado a arrecadação para o mês de novembro fornecido pela própria Secretária de Estado da Fazenda - SEFA
+ </div>
+ 
+A referida pesquisa foi realizada antes da atualização da arrecadação do IPVA e no fim deste artigo foi atuzalizado a arrecadação para o mês de outubro e novembro com o valor real da arrecadação fornecido pela própria Secretária de Estado da Fazenda - SEFA. Como pode ser visto na Tabela 02:
+
+Tabela 02 - Arrecadação real para o IPVA,para o período de de outubro de 2021 - novembro de 2021:
+<div align="center"> 
+
+![image](https://user-images.githubusercontent.com/94062159/146202830-ed8f1e3d-0d18-4de4-a750-62e2bd43fcfd.png)
+
+</div>
