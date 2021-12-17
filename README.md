@@ -38,6 +38,34 @@ Gráfico 03 - Dados de modelagem para a série IPVA:
   
 </div>
 
+# Results
+ The IPVA series is a series that has a seasonality during this same 12-month period, with a trend of growth and non-stationarity during the period from January 2004 to October 2021. As can be seen in Graph 01:
+ 
+ Graph 01 - Collection in millions on IPVA:
+<div align="center">
+  
+![IPVA](https://user-images.githubusercontent.com/94062159/145993329-3d72a959-c87c-41cf-9970-aa2b6d188b61.png)
+
+</div>
+
+Assuming that the series is additive, the series will be decomposed, separating trend, seasonality and residuals into observed data. As can be seen in Graph 02:
+
+ Graph 02 - decomposition of IPVA additive time series:
+<div align="center">
+  
+![SERIES_IPVA](https://user-images.githubusercontent.com/94062159/145993476-8d95b265-89c9-4879-abd3-43af9a9e65a5.png)
+  
+</div>
+
+Now, to carry out the projection, a fundamental part will be carried out, which is the separation of modeling data and data for testing, that is, the original data that were used for comparison with the test data that will be used to perform the prediction. The period for the modeling data used is from January 2004 to March 2021, and the test data used is from April 2021 to October 2021. As can be seen in Graph 03:
+
+Graph 03 - Modeling data for the IPVA series:
+<div align="center">
+  
+![MODELAGEM_IPVA](https://user-images.githubusercontent.com/94062159/145993396-69579747-11a6-44b3-925b-48e162e09076.png)
+  
+</div>
+
 # Conclusão
 
 Portanto, segundo a previsão realizada para 3 meses  ( outubro,novembro e dezembro), do mesmo ano  todos os parâmetros  recomendados pelos modelos deram erro muito acima do recomendavel , então utilizando o modelo de Holt - Winters foram escolhoidos novos parâmetros para aplicação ,causando um erro de  4,92% . Chegando na determinada previsão,apresentado na Tabela 01:
