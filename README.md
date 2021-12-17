@@ -85,3 +85,23 @@ Tabela 02 - Arrecadação real para o IPVA,para o período de de outubro de 2021
 ![image](https://user-images.githubusercontent.com/94062159/146202830-ed8f1e3d-0d18-4de4-a750-62e2bd43fcfd.png)
 
 </div>
+
+# Conclusion
+
+Therefore, according to the forecast made for 3 months (October, November and December), of the same year, all the parameters recommended by the models gave an error much higher than the recommended one, so using the Holt-Winters model, new parameters were chosen for application, causing a 4.92% error. Arriving at the given forecast, presented in Table 01:
+
+Table 01 - Estimated IPVA collection for the period from October 2021 to December 2021:
+<div align="center">
+
+![image](https://user-images.githubusercontent.com/94062159/146196943-609b9e2f-2a62-43c8-93b8-097ead07d21a.png)
+
+ </div>
+ 
+This research was carried out before the update of the IPVA collection and at the end of this article the collection for the month of October and November was updated with the actual value of the collection provided by the Secretary of State for Finance - SEFA. As seen in Table 02:
+
+Table 02 - Actual IPVA collection for the period from October 2021 to November 2021:
+<div align="center">
+
+![image](https://user-images.githubusercontent.com/94062159/146202830-ed8f1e3d-0d18-4de4-a750-62e2bd43fcfd.png)
+
+</div>
