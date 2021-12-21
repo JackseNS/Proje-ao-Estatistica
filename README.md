@@ -104,4 +104,4 @@ Table 02 - Actual IPVA collection for the period from October 2021 to November 2
 
 ![image](https://user-images.githubusercontent.com/94062159/146202830-ed8f1e3d-0d18-4de4-a750-62e2bd43fcfd.png)
 
-</div>
+</div> 
