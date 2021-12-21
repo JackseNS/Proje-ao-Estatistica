@@ -10,7 +10,7 @@
   
   The following data were obtained from SEFA/PA data, will be carried out for data referring to the collection of IPVA - Tax on the Ownership of Motor Vehicles during the period 2004 - 2021, a state tax with the purpose of collecting on automobiles, regardless of the type of vehicle (motorcycles, cars, buses, trucks, etc.).
 
-# Resultados
+# Resultados 
  A série do IPVA e uma serie que possuí uma sazonalidade durante esse mesmo período de 12 meses,com uma tedência de crescimento e não estacionáriedade durante o período de janeiro de 2004 á outubro de 2021. Como pode ser visto na Gráfico 01:
  
  Gráfico 01 - Arrecadação em milhões sobre o IPVA:
