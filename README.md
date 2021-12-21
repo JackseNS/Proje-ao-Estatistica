@@ -4,7 +4,7 @@
   
   Os dados a seguir foram obitidos dos dados da SEFA/PA, sera realizado para dados referentes a arrecadaçao do IPVA - Imposto sobre a Propriedade de Veículos Automotores durante o período de 2004 - 2021, um imposto estadual com o objetivo de arrecadação sobre os automóveis, independe de qual tipo de veículo for (motos, carros, ônibus, caminhões, etc.).
   
- # Statistical Forecast
+ # Statistical Forecast 
  
  A very introductory, simple and didactic form will be presented in that repository to show how a statistical forecast is carried out; in this way, mathematical statistical methods will be used on the concept of time series using exponential smoothing state space model models, Holt - Winters and SARIMA. Thus using the MAPE criterion to choose the best model that will represent my projection.
   
