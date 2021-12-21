@@ -38,7 +38,7 @@ Gráfico 03 - Dados de modelagem para a série IPVA:
   
 </div>
 
-# Results
+# Results 
  The IPVA series is a series that has a seasonality during this same 12-month period, with a trend of growth and non-stationarity during the period from January 2004 to October 2021. As can be seen in Graph 01:
  
  Graph 01 - Collection in millions on IPVA:
