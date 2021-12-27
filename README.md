@@ -1,4 +1,4 @@
-# Previsão Estatística  
+# Previsão Estatística   
 
   Sera apresentado no referido repositorio uma forma bem introdutoria,simples e didatica para mostrar como e realizada uma previsao estatística; deste modo sera utilizado metodos estatisticos matemáticos sobre o conceito de séries temporais utilizando modelos de modelo de espaço de estado de suavizacao exponencial, Holt - Winters e SARIMA. Utilizando, assim o critério de MAPE para a escolha do melhor modelo que vai representar a minha projeçao.
   
